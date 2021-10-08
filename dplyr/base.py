@@ -4,6 +4,11 @@ import copy
 class Dplyr:
     def __init__(self, blob: None):
         self.blob = [] if blob is None else  blob
+
+    def __repr__(self):
+        return f'Blob: # {len(self)}, Headers: {list(self.blob[0].keys())}'
+
+    def __len__(self): return len(self.blob)
     
     def pipe(self, *fns):
         data = copy.deepcopy(self.blob)
@@ -30,7 +35,8 @@ class Dplyr:
         return Dplyr(self.blob[:n])
     
     def tail(self, n:int = 5):
-        return Dplyr(self.blob[-n:])
+        if n == 0: return Dplyr([])
+        else: return Dplyr(self.blob[-n:])
     
     def collect(self):
         return self.blob
