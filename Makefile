@@ -1,5 +1,5 @@
 black:
-	black dplyr tests setup.py --check
+	black dplyr tests setup.py
 
 flake:
 	flake8 dplyr tests setup.py
