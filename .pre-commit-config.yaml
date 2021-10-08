@@ -8,6 +8,10 @@ repos:
     -   id: end-of-file-fixer
     -   id: check-yaml
     -   id: check-added-large-files
+-   repo: https://github.com/psf/black
+    rev: 21.9b0
+    hooks:
+    -   id: black
 -   repo: https://github.com/PyCQA/isort
     rev: 5.9.3
     hooks:
@@ -20,7 +24,3 @@ repos:
             - "--max-line-length=88"
             - "--max-complexity=5"
             - "--per-file-ignores=dplyr/__init__.py:F401"
--   repo: https://github.com/psf/black
-    rev: 21.9b0
-    hooks:
-    -   id: black
