@@ -18,7 +18,8 @@ repos:
     -   id: flake8
         args:
             - "--max-line-length=88"
-            - "--ignore=E203,E266,E501,W503,F403,F401,E402"
+            - "--max-complexity=5"
+            - "--per-file-ignores=dplyr/__init__.py:F401"
 -   repo: https://github.com/psf/black
     rev: 21.9b0
     hooks:
