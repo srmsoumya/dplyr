@@ -1,0 +1,8 @@
+[flake8]
+max-complexity = 5
+max-line-length = 88
+exclude =
+.git,
+__pycache__
+per-file-ignores =
+    dplyr/__init__.py: F401

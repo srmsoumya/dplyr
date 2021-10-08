@@ -1,6 +1,3 @@
-from dplyr import Dplyr
-
-
 def test_can_collect_all(blob):
     assert len(blob.pipe(lambda x: x["i"] < 26)) == 26
 
