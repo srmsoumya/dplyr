@@ -21,7 +21,7 @@
         uses: actions/setup-python@v1
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Test with pytest
-        run: |
-          make install
-          make check
+      - name: Install testing dependencies
+        run: make install-test
+      - name: Automated Checking Machanism
+        run: make check
